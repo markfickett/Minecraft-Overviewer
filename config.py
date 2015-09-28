@@ -1,0 +1,47 @@
+# https://overviewer.readthedocs.org/en/latest/config/
+import os
+from observer import JSObserver
+import poi_filters
+
+BASE = '/home/minecraft/minecraft'
+WORLD_NAME = 'Naib'
+
+worlds[WORLD_NAME] = os.path.join(BASE, 'server/world')
+outputdir = os.path.join(BASE, '../public_html/overviewer')
+
+renders['Day'] = {
+  'world': WORLD_NAME,
+  'title': 'Day',
+  'rendermode': smooth_lighting,
+  'defaultzoom': 3,
+  'markers': poi_filters.ALL_MARKERS,
+}
+
+renders['Night'] = {
+  'world': WORLD_NAME,
+  'title': 'Night',
+  'rendermode': smooth_night,
+  'defaultzoom': 3,
+  'markers': poi_filters.ALL_MARKERS,
+}
+
+renders['Nether'] = {
+  'world': WORLD_NAME,
+  'title': 'Nether',
+  'rendermode': nether_smooth_lighting,
+  'dimension': 'nether',
+  'defaultzoom': 4,
+  'markers': poi_filters.ALL_MARKERS,
+}
+
+end_smooth_lighting = [Base(), EdgeLines(), SmoothLighting(strength=0.5)]
+renders['End'] = {
+  'world': WORLD_NAME,
+  'title': 'End',
+  'rendermode': end_smooth_lighting,
+  'dimension': 'end',
+  'defaultzoom': 7,
+  'markers': poi_filters.ALL_MARKERS,
+}
+
+observer = JSObserver(outputdir=outputdir)
