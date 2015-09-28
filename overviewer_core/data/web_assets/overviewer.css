@@ -150,3 +150,10 @@ div.searchResultItem img {
     width: 24px;
     height: 24px;
 }
+
+/* Local overrides / Mark Fickett 2015 May */
+
+.infoWindow img:first-of-type,
+.infoWindow br:first-of-type {
+    display: none;
+}
