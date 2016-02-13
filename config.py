@@ -5,8 +5,10 @@ import poi_filters
 
 BASE = '/home/minecraft/minecraft'
 WORLD_NAME = 'Naib'
+UP_WORLD_NAME = 'UP'
 
 worlds[WORLD_NAME] = os.path.join(BASE, 'server/world')
+worlds[UP_WORLD_NAME] = os.path.join(BASE, 'upserver/upworld')
 outputdir = os.path.join(BASE, '../public_html/overviewer')
 
 renders['Day'] = {
@@ -41,6 +43,14 @@ renders['End'] = {
   'rendermode': end_smooth_lighting,
   'dimension': 'end',
   'defaultzoom': 7,
+  'markers': poi_filters.ALL_MARKERS,
+}
+
+renders['Up'] = {
+  'world': UP_WORLD_NAME,
+  'title': 'Day',
+  'rendermode': smooth_lighting,
+  'defaultzoom': 3,
   'markers': poi_filters.ALL_MARKERS,
 }
 
