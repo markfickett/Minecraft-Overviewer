@@ -15,7 +15,7 @@ renders['Day'] = {
   'world': WORLD_NAME,
   'title': 'Day',
   'rendermode': smooth_lighting,
-  'defaultzoom': 3,
+  'defaultzoom': 6,
   'markers': poi_filters.ALL_MARKERS,
 }
 
@@ -23,7 +23,7 @@ renders['Night'] = {
   'world': WORLD_NAME,
   'title': 'Night',
   'rendermode': smooth_night,
-  'defaultzoom': 3,
+  'defaultzoom': 6,
   'markers': poi_filters.ALL_MARKERS,
 }
 
@@ -42,7 +42,7 @@ renders['End'] = {
   'title': 'End',
   'rendermode': end_smooth_lighting,
   'dimension': 'end',
-  'defaultzoom': 7,
+  'defaultzoom': 3,
   'markers': poi_filters.ALL_MARKERS,
 }
 
