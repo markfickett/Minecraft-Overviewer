@@ -1,4 +1,4 @@
-# https://overviewer.readthedocs.org/en/latest/config/
+# http://docs.overviewer.org/en/latest/config/
 import os
 from observer import JSObserver
 import poi_filters
@@ -17,6 +17,7 @@ renders['Day'] = {
   'rendermode': smooth_lighting,
   'defaultzoom': 6,
   'markers': poi_filters.ALL_MARKERS,
+#  'forcerender': True,
 }
 
 renders['Night'] = {
